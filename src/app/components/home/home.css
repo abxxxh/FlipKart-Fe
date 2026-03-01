@@ -1,0 +1,106 @@
+/* ===== Full Page Background ===== */
+.home-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Hero Card ===== */
+.hero {
+  max-width: 700px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Title ===== */
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* ===== Subtitle ===== */
+.hero p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* ===== Button Group ===== */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Primary Button ===== */
+.primary-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #e68900;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Secondary Button ===== */
+.secondary-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #2a5298;
+  transform: translateY(-3px);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+}
+.image-home{
+    height: 50px;
+}

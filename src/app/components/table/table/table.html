@@ -1,0 +1,39 @@
+<div class="table-container">
+
+  <h2 class="title">Customer Purchase List</h2>
+
+  <table *ngIf="UserList.length > 0; else noData">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Brand</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of UserList; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.product?.productName }}</td>
+        <td>₹ {{ user.product?.price }}</td>
+        <td>{{ user.product?.brand }}</td>
+        <td>{{ user.product?.purchasedDate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noData>
+    <div class="empty-state">
+      No Data Available
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,59 @@
+/* ===== Navbar ===== */
+.navbar {
+  /* position: sticky; */
+  top: 0;
+  /* width: 100%; */
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* ===== Logo ===== */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s ease;
+  padding-bottom: 5px;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* Active Link */
+.active {
+  border-bottom: 2px solid #ff9800;
+  color: #ff9800;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    gap: 15px;
+  }
+}
