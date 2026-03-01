@@ -13,6 +13,7 @@
         <th>Price</th>
         <th>Brand</th>
         <th>Date</th>
+         <th>Action</th>
       </tr>
     </thead>
 
@@ -26,6 +27,10 @@
         <td>₹ {{ user.product?.price }}</td>
         <td>{{ user.product?.brand }}</td>
         <td>{{ user.product?.purchasedDate | date }}</td>
+        <td class="action-buttons">
+          <button class="edit-btn" (click)="editUserDetails(user.id)">Edit</button>
+          <button class="delete-btn" (click)="deleteauser(user.id)" >Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>

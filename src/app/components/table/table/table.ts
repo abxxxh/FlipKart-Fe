@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { CustomerService } from './../../../shared/http/customer-service';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-table',
@@ -11,7 +12,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 export class Table implements OnInit {
 UserList:any[]=[]
 
- constructor(private http:CustomerService,private cdr:ChangeDetectorRef){}
+ constructor(private http:CustomerService,private cdr:ChangeDetectorRef,private rt:Router){}
 
 
 ngOnInit(): void {
@@ -31,5 +32,24 @@ loadAllProducts(){
     }
   })
 }
+
+editUserDetails(id:number){
+ this.rt.navigate(['/purchase',id])
+}
+deleteauser(id:number){
+  this.http.deleteuser(id).subscribe({
+    next:(d)=>{
+    console.log(d)
+    this.loadAllProducts();
+    },error:(e)=>{
+      console.log(e)
+    }
+  })
+}
+
+
+
+
+
 
 }

@@ -74,3 +74,40 @@ tbody tr:nth-child(even) {
     padding: 10px;
   }
 }
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Edit Button */
+.edit-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0b7dda;
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
