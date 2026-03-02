@@ -38,7 +38,8 @@ export class Purchase implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ProductId = Number(this.act.snapshot.paramMap.get("id"));
+    let routeId= Number(this.act.snapshot.paramMap.get("id"));
+     this.ProductId = routeId ? Number(routeId) : null;
     if (this.ProductId) {
       this.loadUserData();
     }

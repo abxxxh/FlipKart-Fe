@@ -24,6 +24,7 @@
   list-style: none;
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -56,4 +57,19 @@
     margin-top: 10px;
     gap: 15px;
   }
+}
+.logout{
+  background-color: #1e3c72;
+  padding: 10px;
+  border: 0px solid ;
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+.logout:hover{
+   background-color: rgb(217, 212, 212);
+}
+.logout a{
+  color: black !important;
 }

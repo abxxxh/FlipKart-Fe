@@ -5,7 +5,7 @@
 
   <ul class="nav-links">
     <li>
-      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         Home
       </a>
     </li>
@@ -19,6 +19,11 @@
     <li>
       <a routerLink="/table" routerLinkActive="active">
         Table
+      </a>
+    </li>
+    <li class="logout" (click)="logout()" >
+      <a routerLinkActive="active">
+        Logout
       </a>
     </li>
   </ul>
